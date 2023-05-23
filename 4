@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="IE=edge" >
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-<title>小窝内容</title>
+<title>转发三个好友永久保存</title>
 <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.23/skins/default/aliplayer-min.css" />
 <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.23/aliplayer-min.js"></script>
 </head>
@@ -42,6 +42,11 @@ var player = new Aliplayer({
     console.log("The player is created");
   }
 );
+    var vid = document.getElementsByTagName('video')[0];
+vid.addEventListener('ended',function(){ //视频播放完的事件
+//这里写跳转
+window.location = "https://voo8.github.io";
+},false);
 function msg(){
         var text = '分享才能观看完整视频<br><br>点击下面按钮一键复制链接<br><br>分享给好友或群<br><br>从自己分享的链接进入观看完整视频<br><br><br><br><button id="shareBtn" onclick="fz()">一 键 复 制</button>';
         layer.open({
